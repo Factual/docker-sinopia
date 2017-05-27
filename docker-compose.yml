@@ -3,3 +3,10 @@ services:
   sinopia:
     image: registry.prod.factual.com/ops/sinopia:1.0
     build: .
+    environment:
+      - SINOPIA_CONFIG=http://resources.prod.factual.com/services/sinopia/s3-config.yaml
+      - AWS_ACCESS_KEY_ID=
+      - AWS_SECRET_ACCESS_KEY=
+      - SINOPIA_BUCKET=factual-sinopia
+    ports:
+      - 4873

@@ -25,7 +25,7 @@ ADD requirement.txt /home/requirement.txt
 RUN npm install --no-optional --no-shrinkwrap
 RUN pip install -r requirement.txt
 
-RUN perl -pi -e 's|encodeURIComponent|function (thing) { return encodeURIComponent(thing).replace(/^%40/, '@'); }|' node_modules/sinopia/lib/up-storage.js
+RUN perl -pi -e 's|encodeURIComponent|function (thing) { return encodeURIComponent(thing).replace(/^%40/, "@"); }|' node_modules/sinopia/lib/up-storage.js
 
 EXPOSE 4873
 
