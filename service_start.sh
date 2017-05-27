@@ -8,4 +8,3 @@ crontab -l 2>&1  > mycron
 echo "*/10 * * * * $(which aws) s3 sync /home/bucket/ s3://$SINOPIA_BUCKET/ >> /var/log/cron.log" >> mycron
 crontab mycron
 rm mycron
-

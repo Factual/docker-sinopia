@@ -1,0 +1,5 @@
+version: '2'
+services:
+  sinopia:
+    image: registry.prod.factual.com/ops/sinopia:1.0
+    build: .
